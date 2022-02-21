@@ -1,7 +1,16 @@
+# <IfModule mod_rewrite.c>
+#   Options -Multiviews
+#   RewriteEngine On
+#   RewriteBase /object-Oriented-PHP-MVC-Udemy/traversymvc/public
+#   RewriteCond %{REQUEST_FILENAME} !-d
+#   RewriteCond %{REQUEST_FILENAME} !-f
+#   RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+# </IfModule>
+
 <IfModule mod_rewrite.c>
   Options -Multiviews
   RewriteEngine On
-  RewriteBase /traversymvc/public
+  RewriteBase /object-Oriented-PHP-MVC-Udemy/traversymvc/public
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
