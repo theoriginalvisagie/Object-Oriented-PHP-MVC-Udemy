@@ -2,6 +2,7 @@
     class Pages extends Controller{
         public function __construct(){
             // echo "Pages Loaded";
+            $this->postModel = $this->model("Post");
         }
 
         public function index(){
