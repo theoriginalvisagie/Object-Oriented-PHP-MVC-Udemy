@@ -6,12 +6,18 @@
         }
 
         public function index(){
-            $data = array("tile"=>"SharePosts");
+            $data = array(
+                "title"=>"SharePosts",
+                "description"=>"mvc framework"
+                );
             $this->view("pages/index",$data);
         }
 
         public function about(){
-            $data = array("tile"=>"About");
+            $data = array(
+                "title"=>"About",
+                "description"=>"Share Posts"
+                );
             $this->view("pages/about", $data);
         }
     }

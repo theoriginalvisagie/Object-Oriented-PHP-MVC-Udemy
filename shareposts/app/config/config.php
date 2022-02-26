@@ -4,7 +4,9 @@
     // URL Root
     define("URLROOT","http://localhost/object-Oriented-PHP-MVC-Udemy/shareposts") ;
     // Site Name
-    define("SITENAME","MVC");
+    define("SITENAME","SharePosts");
+    //App Version
+    define("APPVERSION","1.0.0");
 
     /*=====[DB PARAMS]=====*/
     define("DB_HOST","localhost");
@@ -12,4 +14,6 @@
     define("DB_PASS","");
     define("DB_NAME","SharePosts");
     /*==========*/
+
+    
 ?>
