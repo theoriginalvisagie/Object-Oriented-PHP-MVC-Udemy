@@ -10,7 +10,8 @@
                 //Process Form
 
                 //Sanitize POST data
-                // $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
                 //Init Data
                 $data = array(
                     "name" => trim($_POST['name']),
@@ -43,8 +44,10 @@
                 //Validate Confirm Password
                 if(empty($data['confirm_password'])){
                     $data['confirm_password_err'] = "Please confirm password";
-                }else if($data['password'] != $data['confirm_password']){
-                    $data['confirm_password_err'] = "Passwords do not match";
+                } else {
+                    if($data['password'] != $data['confirm_password']){
+                        $data['confirm_password_err'] = "Passwords do not match";
+                    }
                 }
 
                 //Make sure errors are empty
@@ -88,15 +91,17 @@
             //Check for post
             if($_SERVER['REQUEST_METHOD'] == "POST"){
                 //Process Form
-                 //Sanitize POST data
-                //  $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-                 //Init Data
-                 $data = array(
-                     "email" => trim($_POST['email']),
-                     "password" => trim($_POST['password']),
-                     "email_err" => "", 
-                     "password_err" => "",
-                 );
+
+                //Sanitize POST data
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+                //Init Data
+                $data = array(
+                    "email" => trim($_POST['email']),
+                    "password" => trim($_POST['password']),
+                    "email_err" => "", 
+                    "password_err" => "",
+                );
 
                   //Validate Email
                 if(empty($data['email'])){
