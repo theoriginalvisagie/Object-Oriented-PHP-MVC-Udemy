@@ -18,5 +18,5 @@
     </form>
     </div>
 <?php require APPROOT . '/views/inc/footer.php'; 
-  echo "<pre>".print_r($_SESSION,true)."</pre>";
+//   echo "<pre>".print_r($_SESSION,true)."</pre>";
 ?>
